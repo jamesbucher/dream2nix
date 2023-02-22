@@ -98,12 +98,13 @@
 
     devShell = pkgs.mkShell {
       buildInputs = [
+        package.buildInputs
         # a drv with all dependencies without the main package
-        (package.overrideAttrs (old: {
-          src = ".";
-          dontUnpack = true;
+        #(package.overrideAttrs (old: {
+        #  src = ".";
+        #  dontUnpack = true;
           #buildPhase = old.preBuild;
-        }))
+        #}))
       ];
     };
   in {
