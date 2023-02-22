@@ -101,6 +101,8 @@
         # a drv with all dependencies without the main package
         (package.overrideAttrs (old: {
           src = ".";
+          dontUnpack = true;
+          buildPhase = old.preBuild;
         }))
       ];
     };
