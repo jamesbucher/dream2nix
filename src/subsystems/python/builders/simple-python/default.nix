@@ -102,7 +102,7 @@
         (package.overrideAttrs (old: {
           src = ".";
           dontUnpack = true;
-          buildPhase = old.preBuild;
+          #buildPhase = old.preBuild;
         }))
       ];
     };
